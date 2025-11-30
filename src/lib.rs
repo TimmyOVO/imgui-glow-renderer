@@ -1077,7 +1077,7 @@ fn prepare_font_atlas<T: TextureMap>(
             0,
             glow::RGBA,
             glow::UNSIGNED_BYTE,
-            Some(atlas_texture.data),
+            glow::PixelUnpackData::Slice(Some(atlas_texture.data)),
         );
     }
 
